@@ -60,3 +60,11 @@ ul {
   position: absolute;
   z-index: -1;
 }
+
+.section__title {
+  font-style: normal;
+  font-weight: $extrabold;
+  font-size: $section-title-size;
+  line-height: $section-title-line;
+  color: $black;
+}

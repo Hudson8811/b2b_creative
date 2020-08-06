@@ -21,6 +21,7 @@
       height: 3px;
       background: $black;
       left: 0;
+      transition: transform 0.2s;
 
       &:nth-child(1) {
         top: 0;
@@ -35,7 +36,7 @@
   &__menu {
     text-align: right;
     z-index: 99;
-    transition: transform 0.5s;
+    transition: transform 0.5s, padding 0.5s;
     transform-origin: top right;
 
     &__link {
@@ -64,6 +65,32 @@
 
     .header__menu {
       transform: scale(0);
+    }
+  }
+
+  &.active {
+    .header__burger {
+      transform: scale(1);
+    }
+
+    .header__menu {
+      padding-top: 20px;
+      transform: scale(1);
+    }
+
+    .header__burger {
+      &__item {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 50%;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+          bottom: auto;
+          top: 50%;
+        }
+      }
     }
   }
 }
