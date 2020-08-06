@@ -1,0 +1,62 @@
+* {
+  list-style: none;
+  outline: none;
+}
+b.db {
+  display: block;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+button {
+  font-family: $main-family;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $main-family;
+  color: $black;
+  background-color: $white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.container {
+  width: 98%;
+  max-width: $content-size;
+  margin: 0 auto;
+}
+
+.big__container {
+  width: 98%;
+  max-width: $content-max-size;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 150px 0;
+}
+
+.page__title {
+  font-size: $page-title-size;
+  line-height: $page-title-line;
+  color: $page-title-color;
+  font-weight: $extrabold;
+}
+
+.circle {
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}

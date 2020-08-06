@@ -1,0 +1,72 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+		link(href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css', rel='stylesheet')
+
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body(class=pageClass)
+		script.
+			let marketsConfig = {
+				defaults: {
+					market: "USD",
+					// Market table field by which data will be sorted by default
+					sorting: "volume", // pair, coin, price, spread, change, high, low, volume
+					tab: "market", // market, group - generates TABs automatically for markets from a pair or set manually in config.group.markets
+					mode: "widget", // widget, page
+					exchange: "https://www.b2bx.exchange/advanced/",
+				},
+				//table columns names, phrases and etc
+				lang: {
+					markets: "Markets",
+					alts: "ALTS",
+					stable: "USDⓈ",
+					percent: "%",
+					symbol: "$",
+					item: "item",
+					favorites: "Favorites",
+					pair: "Pair",
+					coin: "Coin",
+					price: "Last price",
+					spread: "Spread",
+					change: "Change, 24h",
+					high: "High, 24h",
+					low: "Low, 24h",
+					volume: "Volume, 24h",
+					result: "No result",
+					loading: "Loading...",
+					search: "Search",// "Search",
+					all: "All",// "All",
+				},
+				//SignalR link
+				stagingUrl: "https://b2bx.cloud",
+				infoUrl: "/marketdata/info/",
+				frontOfficeUrl: "/frontoffice/api/info",
+				frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
+			};
+		.wrapper
+			include ../modules/header/header
+			#content.site-content
+				.content
+					block content
+			//- include ../modules/footer/footer
+		script(src="js/jquery-3.3.1.min.js")
+		script(src="js/slick.min.js")
+		script(src="js/jquery.fancybox.min.js")
+		script(src="js/jquery.nice-select.min.js")
+		script(src="js/jquery.mCustomScrollbar.concat.min.js")
+		script(src="js/libs.min.js")
+		script(src="js/main.min.js")
+		block script

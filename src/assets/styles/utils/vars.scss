@@ -1,0 +1,42 @@
+// Colors
+$black: #121212;
+$white: #ffffff;
+$blue-active: #2395ff;
+$page-title-color: #0f0f0f;
+
+// fonts
+$main-family: "Roboto", sans-serif;
+// size
+$menu-size: 24px;
+$page-title-size: 80px;
+$big-text-size: 16px;
+// line
+$menu-line: 38px;
+$page-title-line: 80px;
+$big-text-line: 22px;
+// weight
+$extrabold: 900;
+$bold: 600;
+$medium: 500;
+$normal: 400;
+$light: 300;
+
+$breakpoints: (
+  "phone": 320px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tablet-middle": 900px,
+  "tablet-wide": 1000px,
+  "desktop": 1248px,
+  "desktop-wide": 1440px,
+  "desktop-big": 1800px,
+  "desktop-huge": 2000px,
+  "desktop-max": 2900px,
+);
+
+$content-size: 1200px;
+$content-max-size: 1400px;
+$wrapper-size: 1920px;
+// Fonts

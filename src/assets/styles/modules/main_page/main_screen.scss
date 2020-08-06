@@ -1,0 +1,52 @@
+.main_screen__section {
+  position: relative;
+  padding: 80px 0;
+
+  .big__container {
+    position: relative;
+
+    .main_screen__wrapper:nth-child(1) {
+      min-height: 190px;
+      margin-bottom: 62px;
+    }
+  }
+
+  .container {
+    min-height: 319px;
+    position: relative;
+  }
+
+  .main__logo {
+    display: block;
+    width: 100%;
+
+    &__wrapper {
+      display: block;
+      width: 148.22px;
+      position: relative;
+      z-index: 99;
+    }
+  }
+
+  .learn__more__link {
+    font-style: normal;
+    font-weight: $medium;
+    font-size: $big-text-size;
+    line-height: $big-text-line;
+    color: $black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 104px;
+    text-decoration: none;
+
+    span {
+      display: block;
+      margin-right: 15px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
