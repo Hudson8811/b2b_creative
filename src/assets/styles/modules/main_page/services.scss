@@ -1,0 +1,82 @@
+.services {
+  padding: 20px 0;
+  border-top: 1px solid $black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__section {
+    .section__title {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    font-weight: $medium;
+    font-size: $heading-size;
+    line-height: $heading-line;
+    color: $black;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 337px;
+
+    & + .services__content {
+      margin-top: 14px;
+    }
+
+    &__wrapper {
+      width: 50%;
+      max-width: 555px;
+    }
+  }
+
+  &__heading {
+    font-weight: $normal;
+    font-size: $subheading-size;
+    line-height: $subheading-line;
+    /* identical to box height */
+    color: $black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      display: block;
+      margin-right: 12px;
+    }
+
+    svg {
+      transition: transform 0.5s;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__text {
+    font-weight: $light;
+    font-size: $big-text-size;
+    line-height: $big-text-line;
+    /* or 137% */
+    color: $gray;
+    margin-top: 12px;
+    display: none;
+  }
+
+  &__link {
+    display: block;
+    font-weight: $light;
+    font-size: $big-text-size;
+    line-height: $big-text-line;
+    /* or 137% */
+    color: $gray;
+    text-decoration: underline;
+    margin-top: 20px;
+  }
+}

@@ -23,4 +23,17 @@ $(document).ready(function () {
       }
     }
   });
+
+  $(document).on("click", ".services__heading", function () {
+    if (!$(this).hasClass("active")) {
+      $(".services__heading").removeClass("active");
+
+      $(".services__text").slideUp();
+      $(this).addClass("active");
+      $(this).siblings(".services__text").slideDown();
+    } else {
+      $(".services__heading").removeClass("active");
+      $(".services__text").slideUp();
+    }
+  });
 });

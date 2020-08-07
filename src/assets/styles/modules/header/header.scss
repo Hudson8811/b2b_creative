@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 100;
 
+  .big__container {
+    height: 100%;
+  }
+
   &__burger {
     position: relative;
     height: 18px;
@@ -59,6 +63,8 @@
   }
 
   &.scrollable {
+    height: 18px;
+
     .header__burger {
       transform: scale(1);
     }
