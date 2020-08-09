@@ -23,7 +23,8 @@ body {
   background-color: $white;
 }
 
-ul {
+ul,
+p {
   margin: 0;
   padding: 0;
 }
@@ -67,4 +68,68 @@ ul {
   font-size: $section-title-size;
   line-height: $section-title-line;
   color: $black;
+}
+
+.black__btn {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: $normal;
+  font-size: $big-text-size;
+  line-height: $more-btn-line;
+  /* identical to box height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  min-height: 60px;
+  background: $black;
+  text-decoration: none;
+  transition: all 0.5s;
+
+  &:hover {
+    background: $blue;
+  }
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.blue_btn {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: $blue-active;
+  color: $white;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: $medium;
+  font-size: $big-text-size;
+  line-height: $more-btn-line;
+  transition: all 0.5s;
+
+  &:hover {
+    background: $white;
+    color: $black;
+  }
+}
+
+.our_works__more {
+  &.disabled {
+    color: $disabled;
+    border-color: $disabled;
+    pointer-events: none;
+  }
+}
+
+.extrabold {
+  font-weight: $extrabold;
+}
+
+.bold {
+  font-weight: $bold;
 }

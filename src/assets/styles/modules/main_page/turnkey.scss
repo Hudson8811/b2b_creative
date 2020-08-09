@@ -1,0 +1,113 @@
+.turnkey {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+
+  &__item {
+    width: 33%;
+    max-width: 300px;
+
+    .our_works__more {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    &.black {
+      background: $black;
+      box-sizing: border-box;
+      padding: 70px 42px;
+      max-width: 386px;
+      box-shadow: 0px 40px 90px rgba(40, 39, 39, 0.3);
+
+      .blue_btn {
+        margin-top: 40px;
+      }
+
+      .turnkey__title,
+      .turnkey__price,
+      .turnkey__big__price,
+      .turnkey__li,
+      .turnkey__link {
+        color: $white;
+      }
+
+      .turnkey__desc {
+        color: $blue-active;
+      }
+    }
+  }
+
+  &__section {
+    .section__title {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    font-weight: $bold;
+    font-size: $heading-size;
+    line-height: $works-title-line;
+    /* identical to box height, or 69% */
+    color: $black;
+    margin-right: 44px;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 21px;
+  }
+
+  &__price {
+    font-weight: $light;
+    font-size: $exp-text-size;
+    line-height: $exp-text-size;
+    /* identical to box height, or 200% */
+    color: $black;
+  }
+
+  &__big__price {
+    font-weight: $bold;
+    font-size: $menu-size;
+    line-height: $exp-text-size;
+    /* identical to box height, or 150% */
+    color: $black;
+  }
+
+  &__desc {
+    font-weight: $bold;
+    font-size: $big-text-size;
+    line-height: $more-btn-line;
+    /* identical to box height */
+    color: $black;
+    margin-bottom: 40px;
+  }
+
+  &__li {
+    font-weight: $normal;
+    font-size: $turn-size;
+    line-height: $exp-text-size;
+    /* identical to box height, or 187% */
+    color: $black;
+
+    & + .turnkey__li {
+      margin-top: 22px;
+    }
+  }
+
+  &__link {
+    font-weight: $normal;
+    font-size: $turn-size;
+    line-height: $more-btn-line;
+    /* identical to box height */
+    text-decoration-line: underline;
+    color: $black;
+
+    span {
+      display: inline-block;
+      margin-left: 11px;
+    }
+  }
+}

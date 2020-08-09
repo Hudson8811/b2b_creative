@@ -1,0 +1,127 @@
+.footer {
+  background: $black;
+  padding: 211px 0 150px;
+
+  &__top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__content {
+      width: 100%;
+      max-width: 555px;
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    font-weight: $extrabold;
+    font-size: $footer-title-size;
+    line-height: $footer-title-line;
+    color: $white;
+  }
+
+  &__block {
+  }
+
+  &__city {
+    font-weight: $normal;
+    font-size: $exp-text-size;
+    line-height: $exp-text-line;
+    /* identical to box height, or 144% */
+    color: $white;
+    margin-bottom: 14px;
+  }
+
+  &__adress {
+    font-weight: $normal;
+    font-size: $little-text-size;
+    line-height: $footer-adress-line;
+    /* or 150% */
+    color: $white;
+  }
+
+  &__mail,
+  &__phone {
+    font-weight: $normal;
+    font-size: $exp-text-size;
+    line-height: $works-title-line;
+    /* identical to box height, or 144% */
+    color: $white;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+  }
+
+  &__phone {
+    margin-top: 10px;
+  }
+
+  &__menu {
+    width: 100%;
+    margin: 176px 0 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      a {
+        font-weight: $medium;
+        font-size: $little-text-size;
+        line-height: $heading-line;
+        text-align: center;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $white;
+    padding-top: 28px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  &__polic {
+    font-weight: $normal;
+    font-size: $little-text-size;
+    line-height: $foot-polic;
+    /* or 257% */
+    color: $white;
+    text-decoration: none;
+    width: 146px;
+    margin-right: 18px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__prod {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      font-weight: $normal;
+      font-size: $footer-little-size;
+      line-height: $foot-polic;
+      /* or 300% */
+      color: $white;
+      display: block;
+      margin-right: 6px;
+    }
+  }
+}
