@@ -8,6 +8,10 @@ b.db {
   width: 0;
   padding: 0;
   margin: 0;
+
+  @include respond-to("desktop") {
+    display: none;
+  }
 }
 
 a,
@@ -47,6 +51,10 @@ p {
 
 .section {
   padding: 150px 0;
+
+  @include respond-to("tablet") {
+    padding: 50px 0;
+  }
 }
 
 .page__title {
@@ -54,6 +62,11 @@ p {
   line-height: $page-title-line;
   color: $page-title-color;
   font-weight: $extrabold;
+
+  @include respond-to("tablet") {
+    font-size: $page-mob-size;
+    line-height: $page-mob-line;
+  }
 }
 
 .circle {
@@ -68,6 +81,11 @@ p {
   font-size: $section-title-size;
   line-height: $section-title-line;
   color: $black;
+
+  @include respond-to("tablet") {
+    font-size: $menu-size;
+    line-height: $turn-line;
+  }
 }
 
 .black__btn {

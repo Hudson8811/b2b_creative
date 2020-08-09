@@ -2,18 +2,31 @@
   position: relative;
   padding: 80px 0;
 
+  @include respond-to("tablet") {
+    padding: 40px 0;
+  }
+
   .big__container {
     position: relative;
 
     .main_screen__wrapper:nth-child(1) {
       min-height: 190px;
       margin-bottom: 62px;
+
+      @include respond-to("tablet") {
+        min-height: 1px;
+        margin-bottom: 40px;
+      }
     }
   }
 
   .container {
     min-height: 319px;
     position: relative;
+
+    @include respond-to("tablet") {
+      min-height: 1px;
+    }
   }
 
   .main__logo {

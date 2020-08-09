@@ -36,6 +36,8 @@ $small-text-size: 11px;
 $active-placeholder-size: 10px;
 $footer-title-size: 34px;
 $footer-little-size: 12px;
+// adaptive
+$page-mob-size: 24px;
 // line
 $menu-line: 38px;
 $page-title-line: 80px;
@@ -54,6 +56,8 @@ $active-placeholder-line: 12px;
 $footer-title-line: 46px;
 $footer-adress-line: 21px;
 $foot-polic: 36px;
+// adaptive
+$page-mob-line: 28px;
 // weight
 $extrabold: 900;
 $bold: 600;
@@ -69,7 +73,7 @@ $breakpoints: (
   "tablet": 768px,
   "tablet-middle": 900px,
   "tablet-wide": 1000px,
-  "desktop": 1248px,
+  "desktop": 1199px,
   "desktop-wide": 1440px,
   "desktop-big": 1800px,
   "desktop-huge": 2000px,
