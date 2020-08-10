@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @include respond-to("tablet") {
+    display: block;
+  }
+
   &__section {
     .section__title {
       margin-bottom: 60px;
@@ -16,11 +20,19 @@
     font-size: $heading-size;
     line-height: $heading-line;
     color: $black;
+
+    @include respond-to("tablet") {
+      margin-bottom: 20px;
+    }
   }
 
   &__content {
     width: 100%;
     max-width: 337px;
+
+    @include respond-to("tablet") {
+      max-width: none;
+    }
 
     & + .services__content {
       margin-top: 14px;
@@ -29,6 +41,11 @@
     &__wrapper {
       width: 50%;
       max-width: 555px;
+
+      @include respond-to("tablet") {
+        max-width: none;
+        width: 100%;
+      }
     }
   }
 

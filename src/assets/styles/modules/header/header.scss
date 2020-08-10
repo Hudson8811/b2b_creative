@@ -16,8 +16,11 @@
     margin-left: auto;
     cursor: pointer;
     transition: transform 0.5s;
-
     transform: scale(0);
+
+    @include respond-to("tablet") {
+      transform: scale(1);
+    }
 
     &__item {
       position: absolute;
@@ -43,6 +46,10 @@
     transition: transform 0.5s, padding 0.5s;
     transform-origin: top right;
 
+    @include respond-to("tablet") {
+      transform: scale(0);
+    }
+
     &__link {
       font-style: normal;
       font-weight: $medium;
@@ -51,6 +58,14 @@
       color: $black;
       text-decoration: none;
       text-transform: uppercase;
+
+      @include respond-to("tablet") {
+        background: #fff;
+        width: 150px;
+        display: block;
+        margin-left: auto;
+        text-align: center;
+      }
 
       &:hover {
         opacity: 0.7;

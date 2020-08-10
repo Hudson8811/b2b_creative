@@ -3,13 +3,26 @@
   overflow: hidden;
   margin-bottom: 90px;
 
+  @include respond-to("tablet") {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
   &:nth-child(2n) {
     margin-top: 293px;
+
+    @include respond-to("tablet") {
+      margin-top: 0;
+    }
   }
 
   &__section {
     .section__title {
       margin-bottom: 80px;
+
+      @include respond-to("tablet") {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -19,6 +32,11 @@
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: -90px;
+
+    @include respond-to("tablet") {
+      display: block;
+      margin-bottom: 0;
+    }
   }
 
   &__big_image {
@@ -28,9 +46,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     overflow: hidden;
     margin-bottom: 40px;
+
+    @include respond-to("tablet") {
+      height: 200px;
+    }
 
     img {
       position: absolute;
@@ -38,6 +59,12 @@
       z-index: 1;
       transition: all 0.5s;
       width: 100%;
+
+      @include respond-to("tablet") {
+        width: auto !important;
+        height: 100%;
+        margin: 0 auto;
+      }
     }
 
     &__bg {
@@ -48,6 +75,13 @@
       max-width: calc(100% - 140px);
       max-height: calc(100% - 140px);
       border-radius: 5px;
+
+      @include respond-to("tablet") {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &:hover {
@@ -77,6 +111,13 @@
         .our_works__big_image__bg {
           max-width: calc(100% - 140px);
           max-height: calc(100% - 140px);
+
+          @include respond-to("tablet") {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -87,16 +128,27 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 40px;
+
+    @include respond-to("tablet") {
+      display: block;
+    }
   }
 
   &__btn {
     margin-right: 20px;
+
+    @include respond-to("tablet") {
+      margin-right: 0;
+
+      margin-bottom: 20px;
+    }
 
     &:last-child {
       margin-right: 0;
     }
 
     a {
+      display: block;
       font-weight: $light;
       font-size: $works-btns-size;
       line-height: $big-text-line;
@@ -120,6 +172,10 @@
 
       &.orange {
         border: 2px solid $orange;
+      }
+
+      &.pink {
+        border: 2px solid $pink2;
       }
     }
   }

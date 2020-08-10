@@ -1,0 +1,7 @@
+@include respond-to("tablet") {
+  .works__main__section {
+    .big__container .circle:nth-child(5) {
+      left: 0 !important;
+    }
+  }
+}

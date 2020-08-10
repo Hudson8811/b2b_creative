@@ -8,6 +8,10 @@ b.db {
   width: 0;
   padding: 0;
   margin: 0;
+
+  @include respond-to("desktop") {
+    display: none;
+  }
 }
 
 a,
@@ -47,6 +51,10 @@ p {
 
 .section {
   padding: 150px 0;
+
+  @include respond-to("tablet") {
+    padding: 50px 0;
+  }
 }
 
 .page__title {
@@ -54,6 +62,11 @@ p {
   line-height: $page-title-line;
   color: $page-title-color;
   font-weight: $extrabold;
+
+  @include respond-to("tablet") {
+    font-size: $page-mob-size;
+    line-height: $page-mob-line;
+  }
 }
 
 .circle {
@@ -68,6 +81,11 @@ p {
   font-size: $section-title-size;
   line-height: $section-title-line;
   color: $black;
+
+  @include respond-to("tablet") {
+    font-size: $menu-size;
+    line-height: $turn-line;
+  }
 }
 
 .black__btn {
@@ -132,4 +150,66 @@ p {
 
 .bold {
   font-weight: $bold;
+}
+
+.page__subtitle {
+  font-weight: $medium;
+  font-size: $page-suptitle-size;
+  line-height: $page-subtitle-line;
+  color: $black;
+  margin-top: 50px;
+}
+
+.black__section {
+  background: $black;
+}
+
+.main_screen__section.black__section {
+  background: $black;
+
+  .page__title,
+  .page__subtitle {
+    color: $white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .learn__more__link {
+    color: $white;
+    position: relative;
+    z-index: 1;
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .circle {
+    z-index: 0;
+  }
+}
+
+.black__section__trigger {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  z-index: -1;
+
+  &.active {
+    position: fixed;
+  }
+}
+
+.header.black {
+  .header__burger__item {
+    background: $white;
+  }
+
+  .header__menu__link {
+    color: $white;
+    background: $black;
+  }
 }

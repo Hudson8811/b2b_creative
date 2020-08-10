@@ -1,0 +1,132 @@
+.b2broker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to("tablet") {
+    display: block;
+  }
+
+  .our_works__more {
+    margin-left: 0;
+    margin-top: 40px;
+
+    @include respond-to("tablet") {
+      margin: 20px auto 0;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    max-width: 480px;
+
+    @include respond-to("tablet") {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 50%;
+    max-width: 650px;
+
+    @include respond-to("tablet") {
+      width: 100%;
+      max-width: none;
+
+      margin: 30px 0;
+    }
+  }
+
+  &__title {
+    font-weight: $bold;
+    font-size: $page-title-size;
+    line-height: $page-title-line;
+    color: $black;
+    margin-bottom: 5px;
+
+    @include respond-to("tablet") {
+      font-size: $page-mob-size;
+      line-height: $page-mob-line;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+      display: block;
+      margin-right: 6px;
+
+      path {
+        stroke: $graywhite2;
+      }
+    }
+
+    text-decoration: none;
+    font-size: $exp-text-size;
+    line-height: $exp-text-line;
+    /* identical to box height, or 144% */
+    color: $graywhite2;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: $black;
+
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    font-weight: $normal;
+    font-size: $big-text-size;
+    line-height: $big-text-line;
+    /* or 137% */
+    color: black;
+    margin-bottom: 15px;
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+    margin: 140px 0;
+    filter: drop-shadow(0px 40px 80px rgba(0, 0, 0, 0.25));
+
+    @include respond-to("tablet") {
+      margin: 30px 0;
+    }
+  }
+}
+
+.b2broker__section.black__section {
+  position: relative;
+
+  .b2broker__title,
+  .b2broker__desc,
+  .our_works__btn a {
+    color: $white;
+  }
+
+  .our_works__more {
+    color: $white;
+    border: 1px solid $btn-gray;
+
+    &:hover {
+      border: 1px solid $white;
+    }
+  }
+}
+
+.b2broker__section.black__section {
+  .black__section__trigger {
+    top: 90vh;
+    height: 100vh;
+  }
+}
