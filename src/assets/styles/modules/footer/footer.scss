@@ -3,6 +3,12 @@
   background: $black;
   padding: 211px 0 150px;
 
+  .black__section__trigger {
+    top: auto;
+    bottom: 0;
+    height: 10%;
+  }
+
   @include respond-to("tablet") {
     padding: 50px 0;
   }
