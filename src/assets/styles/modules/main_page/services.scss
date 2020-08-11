@@ -20,6 +20,7 @@
     font-size: $heading-size;
     line-height: $heading-line;
     color: $black;
+    align-self: flex-start;
 
     @include respond-to("tablet") {
       margin-bottom: 20px;

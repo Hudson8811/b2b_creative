@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <script>
+      let marketsConfig = {
+      	defaults: {
+      		market: "USD",
+      		// Market table field by which data will be sorted by default
+      		sorting: "volume", // pair, coin, price, spread, change, high, low, volume
+      		tab: "market", // market, group - generates TABs automatically for markets from a pair or set manually in config.group.markets
+      		mode: "widget", // widget, page
+      		exchange: "https://www.b2bx.exchange/advanced/",
+      	},
+      	//table columns names, phrases and etc
+      	lang: {
+      		markets: "Markets",
+      		alts: "ALTS",
+      		stable: "USDⓈ",
+      		percent: "%",
+      		symbol: "$",
+      		item: "item",
+      		favorites: "Favorites",
+      		pair: "Pair",
+      		coin: "Coin",
+      		price: "Last price",
+      		spread: "Spread",
+      		change: "Change, 24h",
+      		high: "High, 24h",
+      		low: "Low, 24h",
+      		volume: "Volume, 24h",
+      		result: "No result",
+      		loading: "Loading...",
+      		search: "Search",// "Search",
+      		all: "All",// "All",
+      	},
+      	//SignalR link
+      	stagingUrl: "https://b2bx.cloud",
+      	infoUrl: "/marketdata/info/",
+      	frontOfficeUrl: "/frontoffice/api/info",
+      	frontOfficeAssetsUrl: '/frontoffice/api/assets-info',
+      };
+    </script>
+    <div class="wrapper">
+      <header class="header">
+        <div class="big__container">
+          <div class="header__burger">
+            <div class="header__burger__item"></div>
+            <div class="header__burger__item"></div>
+          </div>
+          <ul class="header__menu">
+            <li class="header__menu__item"><a class="header__menu__link" href="#">SERVICES</a></li>
+            <li class="header__menu__item"><a class="header__menu__link" href="#">PORTFOLIO</a></li>
+            <li class="header__menu__item"><a class="header__menu__link" href="#">CONTACTS</a></li>
+            <li class="header__menu__item"><a class="header__menu__link" href="#">About us</a></li>
+            <li class="header__menu__item"><a class="header__menu__link" href="#">CAREERS</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="site-content" id="content">
+        <div class="content">
+          <section class="main_screen__section black__section contacts__main_screen__section">
+            <div class="big__container">
+              <div class="main_screen__wrapper"><a class="main__logo__wrapper" href="#"><img class="main__logo" src="images/black_bg_logo.svg" alt="logo"></a></div>
+              <div class="container">
+                <div class="footer__top">
+                  <div class="page__title">Сontacts</div>
+                  <div class="footer__top__content">
+                    <div class="footer__top__block">
+                      <div class="footer__city">Moscow</div>
+                      <div class="footer__adress">"Moscow City" district,</div>
+                      <div class="footer__adress">Presnenskaya Embankment 12,</div>
+                      <div class="footer__adress">Federation Tower East.</div>
+                    </div>
+                    <div class="footer__top__block"><a class="footer__mail" href="mailto:info@b2bcws.com">info@b2bcws.com</a><a class="footer__phone" href="tel:+7 876 543 21(?)">+7 876 543 21(?)</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="circle" style="width:99px; height:99px;background: #7F52FF; right: 37%; top: 10%;"></div>
+              <div class="circle" style="width:268px; height:268px;   background: #E54D57; left: 52px; bottom:143px;"></div>
+              <div class="circle" style="width:198px; height:198px; background: #A8DD12; right: 170px; bottom: 0;"></div>
+            </div>
+          </section>
+          <div class="section turnkey_form__section black__section">
+            <div class="container">
+              <div class="section__title">Have a project to discuss?</div>
+              <div class="turnkey_form">
+                <form class="turnkey_form__content">
+                  <label class="turnkey_form__label"><span class="turnkey_form__placeholder">Your name</span>
+                    <input class="turnkey_form__input" type="text">
+                  </label>
+                  <label class="turnkey_form__label"><span class="turnkey_form__placeholder">Email</span>
+                    <input class="turnkey_form__input" type="email">
+                  </label>
+                  <label class="turnkey_form__label"><span class="turnkey_form__placeholder">Message</span>
+                    <input class="turnkey_form__input" type="text">
+                  </label>
+                  <div class="turnkey_form__file">
+                    <label class="turnkey_form__file__btn_wrapper active" id="turnkey_form__file__btn_wrapper1" for="file1_input">
+                      <input type="file" name="file" id="file1_input" accept=".doc, .pdf"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10.2295" cy="10.4229" r="10" />
+<path d="M13.2559 8.1853L11.4234 13.7969C11.0713 14.8753 9.91257 15.4635 8.83418 15.1113C7.75578 14.7592 7.16756 13.6005 7.51971 12.5221L9.51155 6.42256C9.73145 5.74917 10.4564 5.38112 11.1298 5.60102C11.8032 5.82092 12.1713 6.54591 11.9514 7.2193L10.2782 12.3429C10.1906 12.6113 9.89929 12.7592 9.63091 12.6715C9.36253 12.5839 9.21465 12.2926 9.30229 12.0242L10.8161 7.38857L10.0841 7.14954L8.57035 11.7852C8.35045 12.4586 8.7185 13.1836 9.39189 13.4035C10.0653 13.6234 10.7903 13.2553 11.0102 12.5819L12.6833 7.45832C13.0355 6.37992 12.4472 5.22123 11.3688 4.86908C10.2904 4.51692 9.13176 5.10514 8.7796 6.18354L6.78777 12.2831C6.30335 13.7665 7.11175 15.3589 8.59516 15.8433C10.0786 16.3277 11.6709 15.5193 12.1554 14.0359L13.9878 8.42432L13.2559 8.1853Z" fill="#F4F4F4"/>
+</svg>
+                      <p>Attach your statement of work<b class="db"></b> up to 5 Mb (Doc or PDF up to 2 files)</p>
+                    </label>
+                    <label class="turnkey_form__file__btn_wrapper" id="turnkey_form__file__btn_wrapper2" for="file2_input">
+                      <input type="file" name="file" id="file2_input" accept=".doc, .pdf"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10.2295" cy="10.4229" r="10" />
+<path d="M13.2559 8.1853L11.4234 13.7969C11.0713 14.8753 9.91257 15.4635 8.83418 15.1113C7.75578 14.7592 7.16756 13.6005 7.51971 12.5221L9.51155 6.42256C9.73145 5.74917 10.4564 5.38112 11.1298 5.60102C11.8032 5.82092 12.1713 6.54591 11.9514 7.2193L10.2782 12.3429C10.1906 12.6113 9.89929 12.7592 9.63091 12.6715C9.36253 12.5839 9.21465 12.2926 9.30229 12.0242L10.8161 7.38857L10.0841 7.14954L8.57035 11.7852C8.35045 12.4586 8.7185 13.1836 9.39189 13.4035C10.0653 13.6234 10.7903 13.2553 11.0102 12.5819L12.6833 7.45832C13.0355 6.37992 12.4472 5.22123 11.3688 4.86908C10.2904 4.51692 9.13176 5.10514 8.7796 6.18354L6.78777 12.2831C6.30335 13.7665 7.11175 15.3589 8.59516 15.8433C10.0786 16.3277 11.6709 15.5193 12.1554 14.0359L13.9878 8.42432L13.2559 8.1853Z" fill="#F4F4F4"/>
+</svg>
+                      <p>Attach your statement of work<b class="db"></b> up to 5 Mb (Doc or PDF up to 2 files)</p>
+                    </label>
+                    <div class="turnkey_form__file__content" id="turnkey_form__file__content1">
+                      <div class="turnkey_form__file__content_btns"><svg class="turnkey_form__file__content_btn__add" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.47845" cy="6.26416" r="5.5" stroke="#01BF96"/>
+<path d="M9.45488 3.9436L5.77602 7.73214L3.50147 5.38979" stroke="#01BF96" stroke-width="1.27238"/>
+</svg>
+<svg class="turnkey_form__file__content_btn__remove" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.47845" cy="6.26416" r="5.5" stroke="#121212"/>
+<path d="M4.47845 4.26416L8.47799 8.26369" stroke="#121212"/>
+<path d="M8.47807 4.26416L4.47853 8.26369" stroke="#121212"/>
+</svg>
+                      </div><svg class="turnkey_form__file__content__icon" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.89512 3.98291V0.26416H1.16595C0.784965 0.26416 0.478455 0.556738 0.478455 0.92041V13.6079C0.478455 13.9716 0.784965 14.2642 1.16595 14.2642H10.791C11.1719 14.2642 11.4785 13.9716 11.4785 13.6079V4.63916H7.58262C7.2045 4.63916 6.89512 4.34385 6.89512 3.98291ZM11.4785 3.59736V3.76416H7.81179V0.26416H7.98653C8.16986 0.26416 8.3446 0.33252 8.47351 0.455566L11.2779 3.13525C11.4068 3.2583 11.4785 3.4251 11.4785 3.59736Z" fill="#121212"/>
+</svg><span class="turnkey_form__file__content__title">File for attachment.pdf</span>
+                    </div>
+                    <div class="turnkey_form__file__content" id="turnkey_form__file__content2">
+                      <div class="turnkey_form__file__content_btns"><svg class="turnkey_form__file__content_btn__add" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.47845" cy="6.26416" r="5.5" stroke="#01BF96"/>
+<path d="M9.45488 3.9436L5.77602 7.73214L3.50147 5.38979" stroke="#01BF96" stroke-width="1.27238"/>
+</svg>
+<svg class="turnkey_form__file__content_btn__remove" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.47845" cy="6.26416" r="5.5" stroke="#121212"/>
+<path d="M4.47845 4.26416L8.47799 8.26369" stroke="#121212"/>
+<path d="M8.47807 4.26416L4.47853 8.26369" stroke="#121212"/>
+</svg>
+                      </div><svg class="turnkey_form__file__content__icon" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.89512 3.98291V0.26416H1.16595C0.784965 0.26416 0.478455 0.556738 0.478455 0.92041V13.6079C0.478455 13.9716 0.784965 14.2642 1.16595 14.2642H10.791C11.1719 14.2642 11.4785 13.9716 11.4785 13.6079V4.63916H7.58262C7.2045 4.63916 6.89512 4.34385 6.89512 3.98291ZM11.4785 3.59736V3.76416H7.81179V0.26416H7.98653C8.16986 0.26416 8.3446 0.33252 8.47351 0.455566L11.2779 3.13525C11.4068 3.2583 11.4785 3.4251 11.4785 3.59736Z" fill="#121212"/>
+</svg><span class="turnkey_form__file__content__title">File for attachment.pdf</span>
+                    </div>
+                  </div>
+                  <label class="turnkey_form__label turnkey_form__pic__wrapper"><img class="turnkey_form__pic" src="images/pic.png" alt="img"><span class="turnkey_form__placeholder">Enter symbols</span>
+                    <input class="turnkey_form__input" type="text">
+                  </label>
+                  <div class="turnkey_form__btn__wrapper">
+                    <button class="black__btn">Request a Callback</button>
+                    <p class="turnkey_form__btn__desc">or If you prefer – email us <b class="db"></b> <span class="bold">at info@b2bcws.com</span></p>
+                  </div>
+                  <div class="turnkey_form__polic">B2BCWS uses the information you provide to us to contact you <b class="db"></b> about our relevant content, products and services. For more <b class="db"></b> information check out our <a href="#">Privacy Policy</a>.</div>
+                </form>
+                <div class="turnkey_form__bg"><img src="images/bable_black.png" alt="img"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer black__section">
+        <div class="black__section__trigger"></div>
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__title">Contact us</div>
+            <div class="footer__top__content">
+              <div class="footer__top__block">
+                <div class="footer__city">Moscow</div>
+                <div class="footer__adress">"Moscow City" district,</div>
+                <div class="footer__adress">Presnenskaya Embankment 12,</div>
+                <div class="footer__adress">Federation Tower East.</div>
+              </div>
+              <div class="footer__top__block"><a class="footer__mail" href="mailto:info@b2bcws.com">info@b2bcws.com</a><a class="footer__phone" href="tel:+7 876 543 21(?)">+7 876 543 21(?)</a></div>
+              <ul class="footer__menu">
+                <li class="footer__menu__item"><a href="#">SERVICES</a></li>
+                <li class="footer__menu__item"><a href="#">Portfolio</a></li>
+                <li class="footer__menu__item"><a href="#">ABOUT us</a></li>
+                <li class="footer__menu__item"><a href="#">Contacts</a></li>
+                <li class="footer__menu__item"><a href="#">careerS</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom"><a class="footer__polic" href="#">Cookie Policy</a><a class="footer__polic" href="#">Privacy Policy</a>
+            <p class="footer__prod"> <span>This project is powered by</span><svg width="94" height="16" viewBox="0 0 94 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25.2477 14.1061C27.7209 14.1061 29.4275 12.8534 29.4275 10.8138C29.4275 9.30413 28.1546 8.17991 26.5967 8.03536V7.89082C27.7611 7.70613 28.8574 6.63009 28.8574 5.40951C28.8574 3.62682 27.3355 2.51866 25.1353 2.51866H20.3916V14.1061H25.2477ZM22.5618 4.13272H24.6294C25.882 4.13272 26.7113 4.73498 26.7113 5.77087C26.7113 6.83084 25.8339 7.40098 24.3644 7.40098H22.5618V4.13272ZM22.5618 12.4921V8.8705H24.6936C26.2755 8.8705 27.2091 9.48882 27.2091 10.6692C27.2091 11.8577 26.2996 12.4921 24.7739 12.4921H22.5618Z" fill="white"/>
+<path d="M30.5 6.04601H32.5417C32.5417 4.82543 33.2463 3.89181 34.507 3.89181C35.7195 3.89181 36.4422 4.70286 36.4422 5.75481C36.4422 6.63812 36.0889 7.1922 34.6274 8.66974L30.6124 12.7089V14.1061H38.757V12.3877H33.4229V12.2512L36.0107 9.80199C38.0022 7.85067 38.5884 6.91115 38.5884 5.56208C38.5884 3.63485 36.924 2.22958 34.6194 2.22958C32.2023 2.22958 30.5 3.85378 30.5 6.04601Z" fill="white"/>
+<path d="M45.4847 14.1061C47.958 14.1061 49.6646 12.8534 49.6646 10.8138C49.6646 9.30413 48.3916 8.17991 46.8338 8.03536V7.89082C47.9981 7.70613 49.0944 6.63009 49.0944 5.40951C49.0944 3.62682 47.5725 2.51866 45.3723 2.51866H40.6286V14.1061H45.4847ZM42.7989 4.13272H44.8664C46.1191 4.13272 46.9483 4.73498 46.9483 5.77087C46.9483 6.83084 46.0709 7.40098 44.6014 7.40098H42.7989V4.13272ZM42.7989 12.4921V8.8705H44.9306C46.5126 8.8705 47.4462 9.48882 47.4462 10.6692C47.4462 11.8577 46.5366 12.4921 45.0109 12.4921H42.7989Z" fill="white"/>
+<path d="M50.9559 14.1061H52.9474V9.00701C52.9474 7.77037 53.7483 7.06583 55.0411 7.06583C55.3784 7.06583 55.9084 7.12204 56.0609 7.17826L56.4548 5.26497C56.2702 5.21679 55.5229 5.18467 55.2338 5.18467C54.1016 5.18467 53.1541 5.82708 52.9132 6.69433H52.8751V5.23073H50.9559V14.1061Z" fill="white"/>
+<path d="M60.6066 14.2828C63.2324 14.2828 64.9289 12.5644 64.9289 9.71366C64.9289 6.87902 63.2244 5.16058 60.6066 5.16058C57.9968 5.16058 56.2843 6.88706 56.2843 9.71366C56.2843 12.5644 57.9727 14.2828 60.6066 14.2828ZM60.6066 12.5542C59.2174 12.5542 58.3239 11.5767 58.3239 9.72169C58.3239 7.86673 59.2174 6.88917 60.6066 6.88917C61.9878 6.88917 62.8812 7.86673 62.8812 9.72169C62.8812 11.5767 61.9958 12.5542 60.6066 12.5542Z" fill="white"/>
+<path d="M68.3884 8.92671H68.3503V1.83398H66.3589V14.1061H68.3503V11.0226L68.9585 10.4144L71.6786 14.1061H74.2845L70.5425 9.09534L74.0436 5.32921H71.731L68.3884 8.92671Z" fill="white"/>
+<path d="M80.3056 11.5082C80.0165 12.1667 79.334 12.733 78.3463 12.733C77.0374 12.733 76.2927 11.8015 76.2445 10.3159L76.146 10.2115H82.3795V9.57715C82.3795 6.82281 80.7794 5.16058 78.274 5.16058C75.7285 5.16058 74.0481 6.93524 74.0481 9.75381C74.0481 12.5644 75.7044 14.2828 78.2901 14.2828C80.3618 14.2828 81.9298 13.1886 82.2912 11.6067L80.3056 11.5082ZM78.266 6.71039C79.4625 6.71039 80.2494 7.55356 80.2896 8.88656H76.2526C76.3409 7.56962 77.0775 6.71039 78.266 6.71039Z" fill="white"/>
+<path d="M83.7212 14.1061H85.7126V9.00701C85.7126 7.77037 86.5135 7.06583 87.8063 7.06583C88.1436 7.06583 88.6736 7.12204 88.8262 7.17826L89.2201 5.26497C89.0354 5.21679 88.2881 5.18467 87.9991 5.18467C86.8668 5.18467 85.9193 5.82708 85.6784 6.69433H85.6403V5.23073H83.7212V14.1061Z" fill="white"/>
+<path d="M91.7972 3.69036V2.78346H92.1956V2.52173H91.0938V2.78346H91.4921V3.69036H91.7972Z" fill="white"/>
+<path d="M93.5558 3.69036V2.52591H93.2109L92.9696 3.19047H92.9552L92.7102 2.52591H92.3798V3.69036H92.6619V2.96707H92.6763L92.8778 3.58811H93.0578L93.2593 2.96707H93.2737V3.69036H93.5558Z" fill="white"/>
+<ellipse cx="3.36828" cy="2.8957" rx="2.58214" ry="2.58223" fill="#0ABE98"/>
+<ellipse cx="3.36828" cy="8.06148" rx="2.58214" ry="2.58223" fill="#079270"/>
+<ellipse cx="3.36828" cy="13.2243" rx="2.58214" ry="2.58223" fill="#046A51"/>
+<ellipse cx="8.53234" cy="2.89522" rx="2.58214" ry="2.58223" fill="#28F3C8"/>
+<ellipse cx="8.53234" cy="8.06148" rx="2.58214" ry="2.58223" fill="#0ABE98"/>
+<ellipse cx="8.53234" cy="13.2243" rx="2.58214" ry="2.58223" fill="#079270"/>
+<ellipse cx="13.6974" cy="2.89522" rx="2.58214" ry="2.58223" fill="#7DFFE0"/>
+<ellipse cx="13.6974" cy="8.06148" rx="2.58214" ry="2.58223" fill="#28F3C8"/>
+<ellipse cx="13.6974" cy="13.2243" rx="2.58214" ry="2.58223" fill="#0ABE98"/>
+</svg>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

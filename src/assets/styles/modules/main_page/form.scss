@@ -11,6 +11,62 @@
     .section__title {
       margin-bottom: 60px;
     }
+
+    &.black__section {
+      padding: 0;
+      .container {
+        padding: 150px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+        @include respond-to("tablet") {
+          padding: 50px 0;
+        }
+      }
+
+      .section__title,
+      .turnkey_form__placeholder,
+      .turnkey_form__file__btn_wrapper p,
+      .turnkey_form__btn__desc {
+        color: $white;
+      }
+
+      .black__btn:not(:hover) {
+        background: $white;
+        color: $black;
+      }
+
+      .turnkey_form__input {
+        background: transparent;
+      }
+
+      .turnkey_form__file__btn_wrapper svg {
+        circle {
+          fill: $white;
+        }
+
+        path {
+          fill: $black;
+        }
+      }
+
+      .turnkey_form__file__content__icon {
+        path {
+          fill: $white;
+        }
+      }
+
+      .turnkey_form__file__content_btn__remove {
+        path,
+        circle {
+          stroke: $white;
+        }
+      }
+
+      .turnkey_form__file__btn_wrapper:hover svg circle {
+        fill: $blue-active;
+      }
+    }
   }
 
   &__content {
@@ -44,9 +100,54 @@
         color: $blue-active;
       }
     }
+
+    &.turnkey_form__label__modal_phone {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid $white-border;
+      padding-bottom: 8px;
+
+      .turnkey_form__icon {
+        width: 30px;
+        flex-shrink: 0;
+        margin-right: 3px;
+      }
+
+      .turnkey_form__input {
+        border: none;
+        padding-bottom: 0;
+      }
+
+      .turnkey_form__placeholder {
+        left: 70px;
+        top: 5px;
+      }
+
+      &.active {
+        .turnkey_form__placeholder {
+          left: 0;
+          top: -12px;
+        }
+      }
+    }
+  }
+  &__select {
+    font-weight: $normal;
+    font-size: $little-text-size;
+    line-height: $big-text-size;
+    letter-spacing: 2.2px;
+    color: $black;
+    border: none;
+    background: center right / auto url(../images/arow.svg) no-repeat;
+    appearance: none;
+    padding-right: 7px;
+    text-align-last: center;
+    margin-right: 8px;
   }
 
   &__input {
+    box-sizing: border-box;
     height: 29px;
     display: block;
     width: 100%;
@@ -57,6 +158,9 @@
     line-height: $more-btn-line;
     /* identical to box height */
     color: $black;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 8px;
   }
 
   &__placeholder {
@@ -79,6 +183,10 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+
+      @include respond-to("phablet") {
+        display: block;
+      }
 
       .turnkey_form__placeholder {
         left: 142px;

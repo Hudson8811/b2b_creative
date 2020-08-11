@@ -1,0 +1,98 @@
+.fancybox-bg {
+  background: #7e7e7e;
+}
+
+.fancybox-is-open .fancybox-bg {
+  background: #7e7e7e;
+}
+
+.fancybox-content {
+  background: transparent;
+}
+
+.fancybox-close-small {
+  display: none;
+}
+.fancybox-content {
+  @include respond-to("tablet") {
+    padding: 5px;
+  }
+}
+.modal {
+  &__artist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+
+    span {
+      display: block;
+      margin-left: 8px;
+      font-weight: $medium;
+      font-size: $big-text-size;
+      line-height: $more-btn-line;
+      /* identical to box height */
+      color: $black;
+    }
+  }
+
+  .turnkey_form__content {
+    max-width: none;
+  }
+
+  &__container {
+    padding: 120px 200px;
+    box-sizing: border-box;
+    max-width: 1050px;
+    width: 98%;
+    background: #fff;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    margin: 0 auto;
+
+    @include respond-to("desktop") {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: $extrabold;
+    font-size: $heading-size;
+    line-height: $heading-line;
+    /* or 122% */
+    color: $black;
+    margin-bottom: 45px;
+
+    @include respond-to("tablet") {
+      font-size: $big-text-size;
+      line-height: $big-text-line;
+    }
+  }
+
+  .turnkey_form__file__content + .turnkey_form__file__content {
+    margin-left: 10px;
+  }
+  .turnkey_form__file__btn_wrapper {
+    margin-right: 10px;
+    align-items: center;
+  }
+
+  .turnkey_form__file {
+    align-items: center;
+  }
+
+  .turnkey_form__btn__wrapper {
+    .black__btn {
+      max-width: 280px;
+      margin-right: 10px;
+
+      @include respond-to("tablet") {
+        max-width: none;
+        width: 100%;
+      }
+    }
+    .turnkey_form__polic {
+      margin-top: 0;
+    }
+  }
+}

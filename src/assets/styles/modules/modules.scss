@@ -3,6 +3,7 @@
 @import "template/slick.scss";
 @import "template/fancybox.scss";
 @import "template/nice-select.scss";
+@import "modals.scss";
 
 //header
 @import "header/header.scss";
@@ -21,3 +22,10 @@
 // Our Works
 @import "works/main_screen.scss";
 @import "works/b2broker.scss";
+
+// Contacts
+@import "contacts/main_screen.scss";
+
+// Careers
+@import "careers/main_screen.scss";
+@import "careers/service.scss";

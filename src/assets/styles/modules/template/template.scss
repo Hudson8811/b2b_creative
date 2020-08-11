@@ -92,7 +92,7 @@ p {
   border: none;
   padding: 0;
   cursor: pointer;
-  font-weight: $normal;
+  font-weight: $medium;
   font-size: $big-text-size;
   line-height: $more-btn-line;
   /* identical to box height */
@@ -210,6 +210,5 @@ p {
 
   .header__menu__link {
     color: $white;
-    background: $black;
   }
 }
