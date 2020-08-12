@@ -258,64 +258,29 @@
     });
 })(jQuery);
 
-// function checkBlack() {
-//   if (
-//     $(".main_screen__section.black__section .black__section__trigger").visible({
-//       detectPartial: false,
-//     }) ||
-//     $(".footer.black__section .black__section__trigger").visible({
-//       detectPartial: false,
-//     }) ||
-//     $(".b2broker__section.black__section .black__section__trigger").visible({
-//       detectPartial: false,
-//     }) ||
-//     $(".b2broker__section2.black__section .black__section__trigger").visible({
-//       detectPartial: false,
-//     })
-//   ) {
-//     $(".header").addClass("black");
-//   } else {
-//     $(".header").removeClass("black");
-//   }
-// }
+function getPage() {
+  links = Array.from(document.querySelectorAll(".header__menu__link"));
+  body = document.querySelector("body");
+
+  links.forEach(function (item, i, arr) {
+    if (item.innerText.toUpperCase() === body.classList.value.toUpperCase()) {
+      item.classList.add("active");
+    } else {
+      return;
+    }
+  });
+}
 
 function black() {
   $("body").mouseover(function (e) {
     if (
       $(e.target).hasClass("black__section") ||
-      $(e.target).parent().hasClass("black__section") ||
-      $(e.target).parent().parent().hasClass("black__section") ||
-      $(e.target).parent().parent().parent().hasClass("black__section") ||
-      $(e.target)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .hasClass("black__section") ||
-      $(e.target)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .hasClass("black__section") ||
-      $(e.target)
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .parent()
-        .hasClass("black__section")
+      $(e.target).parents().hasClass("black__section")
     ) {
       $(".header").addClass("black");
     } else if (
       $(e.target).hasClass("black") ||
-      $(e.target).parent().hasClass("black") ||
-      $(e.target).parent().parent().hasClass("black") ||
-      $(e.target).parent().parent().parent().hasClass("black") ||
-      $(e.target).parent().parent().parent().parent().hasClass("black") ||
-      $(e.target).parent().parent().parent().parent().parent().hasClass("black")
+      $(e.target).parents().hasClass("black")
     ) {
       $(".header").addClass("black");
     } else {
@@ -325,6 +290,8 @@ function black() {
 }
 
 $(document).ready(function () {
+  getPage();
+
   $("input[name='phone']").mask("(999) 999-99-99");
 
   if ($(window).scrollTop() > 50 && !$(".header").hasClass("active"))
@@ -424,14 +391,6 @@ $(document).ready(function () {
     }
   );
 
-  // checkBlack();
-  // $(document).scroll(function () {
-  //   checkBlack();
-  // });
-  // $(window).resize(function () {
-  //   checkBlack();
-  // });
-
   $(document).on("click", ".learn__more__link", function () {
     $("html, body").animate(
       {
@@ -462,11 +421,43 @@ $(document).ready(function () {
   });
 
   black();
+
   $(document).scroll(function (e) {
     black();
   });
 
   $(window).resize(function () {
     black();
+  });
+
+  $(".expertise__circle").mousemove(function (e) {
+    var x = e.pageX - $(this).offset().left;
+    var y = e.pageY - $(this).offset().top;
+
+    var w = $(this).width();
+    var h = $(this).height();
+    if (x > w / 2 && y > h / 2) {
+      $(this).css({
+        transform: `translate(-20%, -20%)`,
+      });
+    } else if (x < w / 2 && y < h / 2) {
+      $(this).css({
+        transform: `translate(20%,20%)`,
+      });
+    } else if (x > w / 2 && y < h / 2) {
+      $(this).css({
+        transform: `translate(-20%,20%)`,
+      });
+    } else if (x < w / 2 && y > h / 2) {
+      $(this).css({
+        transform: `translate(20%, -20%)`,
+      });
+    }
+
+    $(this).mouseleave(function () {
+      $(this).css({
+        transform: `translate(0, 0)`,
+      });
+    });
   });
 });

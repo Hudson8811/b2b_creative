@@ -1,0 +1,83 @@
+.whatwd {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: -150px;
+  flex-wrap: wrap;
+
+  @include respond-to("tablet") {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  &__section {
+    .section__title {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__item {
+    width: (40%);
+    max-width: 480px;
+    margin-bottom: 150px;
+
+    @include respond-to("tablet") {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 40px;
+    }
+
+    &:nth-child(3n + 1) {
+      width: 55%;
+      max-width: 641px;
+
+      @include respond-to("tablet") {
+        width: 100%;
+        max-width: none;
+      }
+
+      .whatwd__img {
+        height: auto;
+      }
+    }
+
+    &:nth-child(2n) {
+      .whatwd__title {
+        margin: 0;
+      }
+
+      .whatwd__desc {
+        margin: 40px 0;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    background-color: $black;
+    height: 555px;
+    object-fit: contain;
+
+    @include respond-to("tablet") {
+      height: 300px;
+    }
+  }
+
+  &__title {
+    font-weight: $extrabold;
+    font-size: $heading-size;
+    line-height: $heading-line;
+    /* identical to box height */
+    color: $bold;
+    margin: 40px 0;
+  }
+
+  &__desc {
+    font-weight: $normal;
+    font-size: $exp-text-size;
+    line-height: $exp-text-line;
+    /* or 144% */
+    color: $black;
+  }
+}

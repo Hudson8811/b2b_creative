@@ -210,5 +210,9 @@ p {
 
   .header__menu__link {
     color: $white;
+
+    &.active {
+      color: $blue-active;
+    }
   }
 }

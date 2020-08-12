@@ -37,6 +37,8 @@
   }
 
   &__section {
+    overflow: hidden;
+
     .section__title {
       margin-bottom: 60px;
     }
@@ -62,6 +64,7 @@
     color: $white;
     border-radius: 50%;
     position: absolute;
+    transition: all 0.5s;
 
     @include respond-to("desktop") {
       font-size: $small-text-size;

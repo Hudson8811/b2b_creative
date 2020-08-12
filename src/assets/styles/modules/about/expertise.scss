@@ -1,0 +1,19 @@
+.about__expertise__section {
+  padding: 0;
+
+  .expertise {
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 50%;
+      max-width: 641px;
+
+      @include respond-to("tablet") {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}

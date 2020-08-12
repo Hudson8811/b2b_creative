@@ -1,0 +1,11 @@
+extends template/main
+
+block variables
+	- var title = 'About us'
+	- var pageClass = 'About us'
+
+block content
+	include modules/about/main_screen
+	include modules/about/what_we_do
+	include modules/about/expertise
+	include modules/main_page/form
