@@ -66,6 +66,15 @@
     position: absolute;
     transition: all 0.5s;
 
+    &::before {
+      content: "";
+      display: block;
+      width: 140%;
+      height: 140%;
+      position: absolute;
+      border-radius: 50%;
+    }
+
     @include respond-to("desktop") {
       font-size: $small-text-size;
       line-height: $small-text-line;
