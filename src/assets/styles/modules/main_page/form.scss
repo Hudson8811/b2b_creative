@@ -3,6 +3,16 @@
   justify-content: flex-start;
   align-items: center;
 
+  .turnkey_form__placeholder__resume {
+    margin-top: 40px;
+    position: relative;
+    display: block;
+
+    & + .turnkey_form__file {
+      margin-top: 5px;
+    }
+  }
+
   @include respond-to("tablet-wide") {
     display: block;
   }
@@ -102,6 +112,8 @@
     }
 
     &.turnkey_form__label__modal_phone {
+      height: 30px;
+      box-sizing: border-box;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -121,7 +133,7 @@
 
       .turnkey_form__placeholder {
         left: 70px;
-        top: 5px;
+        top: 0;
       }
 
       &.active {
@@ -148,7 +160,7 @@
 
   &__input {
     box-sizing: border-box;
-    height: 29px;
+    height: 30px;
     display: block;
     width: 100%;
     border: none;

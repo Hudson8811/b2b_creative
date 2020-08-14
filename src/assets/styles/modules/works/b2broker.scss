@@ -44,7 +44,7 @@
     font-size: $page-title-size;
     line-height: $page-title-line;
     color: $black;
-    margin-bottom: 5px;
+    margin-bottom: 24px;
 
     @include respond-to("tablet") {
       font-size: $page-mob-size;
@@ -60,6 +60,7 @@
     svg {
       display: block;
       margin-right: 6px;
+      margin-top: -4px;
 
       path {
         stroke: $graywhite2;
@@ -87,9 +88,9 @@
   &__desc {
     font-weight: $normal;
     font-size: $big-text-size;
-    line-height: $big-text-line;
+    line-height: $exp-text-line;
     /* or 137% */
-    color: black;
+    color: $black;
     margin-bottom: 15px;
   }
 
@@ -120,6 +121,18 @@
 
     &:hover {
       border: 1px solid $white;
+    }
+  }
+
+  .b2broker__link {
+    &:hover {
+      color: $white;
+
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
     }
   }
 }

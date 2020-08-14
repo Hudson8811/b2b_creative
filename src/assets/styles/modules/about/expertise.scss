@@ -4,15 +4,113 @@
   .expertise {
     justify-content: space-between;
     align-items: center;
+  }
 
-    img {
-      display: block;
-      width: 50%;
-      max-width: 641px;
+  .expertise__circle__block {
+    max-width: 641px;
+    width: 60%;
 
-      @include respond-to("tablet") {
-        width: 100%;
-        max-width: none;
+    .expertise__circle {
+      &:nth-child(1) {
+        top: 43px;
+        left: 6px;
+        width: 196px;
+        height: 196px;
+        background: linear-gradient(0deg, #e54d57, #e54d57), #84f8cf;
+      }
+
+      &:nth-child(2) {
+        left: 288px;
+        top: 141px;
+        width: 47px;
+        height: 47px;
+        background: linear-gradient(0deg, #7f52ff, #7f52ff), #4aa083;
+      }
+
+      &:nth-child(3) {
+        right: 180px;
+        top: 43px;
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(0deg, #ff8e95, #ff8e95), #a4fcde;
+      }
+
+      &:nth-child(4) {
+        right: 131px;
+        top: -60px;
+        width: 82px;
+        height: 82px;
+        background: linear-gradient(0deg, #bb34fb, #bb34fb), #59c59e;
+      }
+
+      &:nth-child(5) {
+        right: 23px;
+        top: 99px;
+        width: 173px;
+        height: 173px;
+        background: linear-gradient(0deg, #ff7a00, #ff7a00), #84f8cf;
+      }
+
+      &:nth-child(6) {
+        left: -34px;
+        bottom: 145px;
+        width: 135px;
+        height: 135px;
+        background: linear-gradient(0deg, #a8dd12, #a8dd12), #a4fcde;
+      }
+
+      &:nth-child(7) {
+        left: 220px;
+        bottom: 188px;
+        width: 157px;
+        height: 157px;
+        background: linear-gradient(0deg, #07d6a5, #07d6a5), #c1fde8;
+      }
+
+      &:nth-child(8) {
+        right: 103px;
+        bottom: 209px;
+        width: 81px;
+        height: 81px;
+        background: linear-gradient(0deg, #f0d800, #f0d800), #84f8cf;
+      }
+
+      &:nth-child(9) {
+        left: 160px;
+        bottom: 52px;
+        width: 118px;
+        height: 118px;
+        background: linear-gradient(0deg, #2395ff, #2395ff), #59c59e;
+      }
+
+      @include respond-to("desktop") {
+        width: 40px !important;
+        height: 40px !important;
+
+        &:nth-child(2n) {
+          width: 60px !important;
+          height: 60px !important;
+        }
+
+        &:nth-child(4) {
+          top: 60px;
+        }
+
+        &:nth-child(6) {
+          left: 0;
+        }
+
+        &:nth-child(2) {
+          left: 0;
+        }
+
+        &:nth-child(7) {
+          left: 40px;
+        }
+
+        &:nth-child(9) {
+          left: 70px;
+        }
       }
     }
   }

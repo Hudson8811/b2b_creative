@@ -270,42 +270,61 @@ function getPage() {
     }
   });
 }
+var footer = false;
 
 function black() {
   $("body").mouseover(function (e) {
-    if (
-      $(e.target).hasClass("black__section") ||
-      $(e.target).parents().hasClass("black__section")
-    ) {
-      $(".header").addClass("black");
-    } else if (
-      $(e.target).hasClass("black") ||
-      $(e.target).parents().hasClass("black")
-    ) {
-      $(".header").addClass("black");
+    if (!footer) {
+      if (
+        $(e.target).hasClass("black__section") ||
+        $(e.target).parents().hasClass("black__section")
+      ) {
+        $(".header").addClass("black");
+      } else if (
+        $(e.target).hasClass("black") ||
+        $(e.target).parents().hasClass("black")
+      ) {
+        $(".header").addClass("black");
+      } else {
+        $(".header").removeClass("black");
+      }
     } else {
-      $(".header").removeClass("black");
     }
   });
 }
 
+function footerCheck() {
+  if ($(".footer").visible(true) && !$("body").hasClass("CONTACTS")) {
+    if ($(window).height() > 855) {
+      $(".header").removeClass("black");
+      footer = true;
+    }
+  } else {
+    footer = false;
+  }
+}
+
 $(document).ready(function () {
+  if ($("body").hasClass("SERVICES")) {
+    $(".header").addClass("scrollable");
+  } else {
+    if ($(window).scrollTop() > 50 && !$(".header").hasClass("active"))
+      $(".header").addClass("scrollable");
+    else $(".header").removeClass("scrollable");
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50 && !$(".header").hasClass("active"))
+        $(".header").addClass("scrollable");
+      else {
+        $(".header").removeClass("scrollable");
+        $(".header").removeClass("active");
+      }
+    });
+  }
+
   getPage();
 
   $("input[name='phone']").mask("(999) 999-99-99");
-
-  if ($(window).scrollTop() > 50 && !$(".header").hasClass("active"))
-    $(".header").addClass("scrollable");
-  else $(".header").removeClass("scrollable");
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50 && !$(".header").hasClass("active"))
-      $(".header").addClass("scrollable");
-    else {
-      $(".header").removeClass("scrollable");
-      $(".header").removeClass("active");
-    }
-  });
 
   $(document).on("click", ".header__burger", function () {
     if (!$(".header").hasClass("active")) {
@@ -321,14 +340,11 @@ $(document).ready(function () {
 
   $(document).on("click", ".services__heading", function () {
     if (!$(this).hasClass("active")) {
-      $(".services__heading").removeClass("active");
-
-      $(".services__text").slideUp();
       $(this).addClass("active");
       $(this).siblings(".services__text").slideDown();
     } else {
-      $(".services__heading").removeClass("active");
-      $(".services__text").slideUp();
+      $(this).removeClass("active");
+      $(this).siblings(".services__text").slideUp();
     }
   });
 
@@ -420,13 +436,16 @@ $(document).ready(function () {
     });
   });
 
+  footerCheck();
   black();
 
   $(document).scroll(function (e) {
+    footerCheck();
     black();
   });
 
   $(window).resize(function () {
+    footerCheck();
     black();
   });
 

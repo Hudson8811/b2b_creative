@@ -3,6 +3,16 @@
   background: $black;
   padding: 211px 0 150px;
 
+  &.small_footer {
+    padding-top: 0;
+
+    .footer__menu {
+      margin: 100px 0;
+      max-width: 535px;
+      margin-left: auto;
+    }
+  }
+
   .black__section__trigger {
     top: auto;
     bottom: 0;
@@ -108,9 +118,10 @@
         color: $white;
         text-decoration: none;
         text-transform: uppercase;
+        transition: all 0.5s;
 
         &:hover {
-          opacity: 0.7;
+          color: $blue-active;
         }
       }
     }

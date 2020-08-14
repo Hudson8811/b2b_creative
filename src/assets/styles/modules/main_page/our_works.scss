@@ -123,11 +123,29 @@
     }
   }
 
+  &:nth-child(1) {
+    .our_works__big_image__shadow {
+      display: block;
+      width: 114%;
+      height: auto;
+      position: absolute;
+      bottom: 36px;
+      left: 24px;
+      transform: rotate(-16.48deg);
+      z-index: 0;
+      opacity: 0.5;
+
+      @include respond-to("desktop") {
+        display: none;
+      }
+    }
+  }
+
   &__btns {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 40px;
+    margin-top: 30px;
 
     @include respond-to("tablet") {
       display: block;
@@ -157,26 +175,27 @@
       text-decoration: none;
       box-sizing: border-box;
       border-radius: 20px;
+      border: 1px solid #d6d6d6;
 
-      &.yellow {
-        border: 2px solid $yellow;
-      }
+      // &.yellow {
+      //   border: 2px solid $yellow;
+      // }
 
-      &.blue {
-        border: 2px solid $blue-active;
-      }
+      // &.blue {
+      //   border: 2px solid $blue-active;
+      // }
 
-      &.green {
-        border: 2px solid $green;
-      }
+      // &.green {
+      //   border: 2px solid $green;
+      // }
 
-      &.orange {
-        border: 2px solid $orange;
-      }
+      // &.orange {
+      //   border: 2px solid $orange;
+      // }
 
-      &.pink {
-        border: 2px solid $pink2;
-      }
+      // &.pink {
+      //   border: 2px solid $pink2;
+      // }
     }
   }
 
@@ -185,14 +204,38 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+
+    svg:last-child {
+      transition: all 0.5s;
+
+      path {
+        transition: all 0.5s;
+      }
+    }
+
+    &:hover {
+      svg:last-child {
+        path {
+          stroke: #2395ff;
+        }
+      }
+    }
   }
 
   &__title {
+    display: block;
     font-weight: $normal;
     font-size: $works-title-size;
     line-height: $works-title-line;
     color: $black;
-    margin: 15px 0 21px;
+    margin: 30px 0 30px;
+    transition: all 0.5s;
+    color: $link-title;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__desc {

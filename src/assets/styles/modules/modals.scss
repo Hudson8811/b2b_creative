@@ -1,9 +1,9 @@
 .fancybox-bg {
-  background: #7e7e7e;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .fancybox-is-open .fancybox-bg {
-  background: #7e7e7e;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .fancybox-content {
@@ -84,7 +84,7 @@
   .turnkey_form__btn__wrapper {
     .black__btn {
       max-width: 280px;
-      margin-right: 10px;
+      margin-right: 25px;
 
       @include respond-to("tablet") {
         max-width: none;

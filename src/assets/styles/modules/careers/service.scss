@@ -3,7 +3,6 @@
     max-width: none;
 
     + .services__content {
-      margin-top: 80px;
     }
   }
 
@@ -34,6 +33,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+      padding-left: 6px;
 
       &:before {
         content: "";
@@ -45,6 +45,7 @@
         margin-right: 10px;
         margin-top: 10px;
         border-radius: 50%;
+        flex-shrink: 0;
       }
 
       & + .careers__item {
