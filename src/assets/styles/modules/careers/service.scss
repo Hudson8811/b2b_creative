@@ -60,6 +60,8 @@
       }
       .careers__item {
         display: inline;
+        padding-left: 0;
+
         &:before {
           display: none;
         }
@@ -70,5 +72,6 @@
   .black__btn {
     margin-top: 30px;
     max-width: 280px;
+    margin-bottom: 70px;
   }
 }

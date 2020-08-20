@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: -12px;
 
   @include respond-to("tablet") {
     display: block;
@@ -60,6 +61,7 @@
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
+    padding-bottom: 12px;
 
     span {
       display: block;
@@ -83,7 +85,6 @@
     line-height: $big-text-line;
     /* or 137% */
     color: $gray;
-    margin-top: 12px;
     display: none;
   }
 
@@ -96,5 +97,6 @@
     color: $gray;
     text-decoration: underline;
     margin-top: 20px;
+    padding-bottom: 12px;
   }
 }
