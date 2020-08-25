@@ -31,6 +31,10 @@
     line-height: $policy-text-line;
     /* or 143% */
     color: $policy-text;
+
+    & + .policy__desc {
+      margin-top: 25px;
+    }
   }
 
   &__link {
@@ -53,6 +57,36 @@
       color: $black-text;
       margin: 120px auto 100px;
       text-align: center;
+    }
+  }
+
+  &__ul {
+    margin: 20px 0;
+    &__item {
+      font-style: normal;
+      font-weight: $normal;
+      font-size: $little-text-size;
+      line-height: $policy-text-line;
+      /* or 143% */
+      color: $policy-text;
+      padding-left: 23px;
+      position: relative;
+
+      & + .policy__ul__item {
+        margin-top: 15px;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        background: #2395ff;
+        position: absolute;
+        left: 5px;
+        top: 6px;
+        border-radius: 50%;
+      }
     }
   }
 }
