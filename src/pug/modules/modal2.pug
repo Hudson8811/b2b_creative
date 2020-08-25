@@ -10,11 +10,11 @@ div(class="modal-fancy modal" id="modal2" style="display:none")
             form.turnkey_form__content
                 label.turnkey_form__label
                     span.turnkey_form__placeholder Your name *
-                    input.turnkey_form__input(type="text")
+                    input.turnkey_form__input(type="text" name="name" required)
                 
                 label.turnkey_form__label
                     span.turnkey_form__placeholder Email *
-                    input.turnkey_form__input(type="email")
+                    input.turnkey_form__input(type="email" required)
                 
                 label.turnkey_form__label.turnkey_form__label__modal_phone(for="phone_modal_input")
                     img.turnkey_form__icon(src="images/eng.png", alt="language")
@@ -23,7 +23,7 @@ div(class="modal-fancy modal" id="modal2" style="display:none")
                         option(value="8") 8
                         option(value="9") 9
                     span.turnkey_form__placeholder Phone *
-                    input.turnkey_form__input#phone_modal_input(type="text", name="phone")
+                    input.turnkey_form__input#phone_modal_input(type="text", name="phone" required)
                 
                 label.turnkey_form__label
                     span.turnkey_form__placeholder Message
@@ -32,8 +32,8 @@ div(class="modal-fancy modal" id="modal2" style="display:none")
                 span.turnkey_form__placeholder.turnkey_form__placeholder__resume Resume *
 
                 .turnkey_form__file
-                    label.turnkey_form__file__btn_wrapper#turnkey_form__file__btn_wrapper1.active(for="file1_input")
-                        input(type="file", name="file", id="file1_input", accept=".doc, .pdf")
+                    label.turnkey_form__file__btn_wrapper.turnkey_form__file__btn_wrapper1.active(for="file8_input")
+                        input.file1_input(type="file", name="file", id="file8_input", accept=".doc, .pdf", required)
 
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="10.2295" cy="10.4229" r="10" />
@@ -42,8 +42,8 @@ div(class="modal-fancy modal" id="modal2" style="display:none")
 
                         p Attach your resume up to 5 Mb (Doc or PDF up to 2 files)
                     
-                    label.turnkey_form__file__btn_wrapper#turnkey_form__file__btn_wrapper2(for="file2_input")
-                        input(type="file", name="file", id="file2_input", accept=".doc, .pdf")
+                    label.turnkey_form__file__btn_wrapper.turnkey_form__file__btn_wrapper2(for="file9_input")
+                        input.file2_input(type="file", name="file", id="file9_input", accept=".doc, .pdf", required)
 
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="10.2295" cy="10.4229" r="10" />
@@ -52,7 +52,7 @@ div(class="modal-fancy modal" id="modal2" style="display:none")
 
                         p Attach your resume up to 5 Mb (Doc or PDF up to 2 files)
                     
-                    .turnkey_form__file__content#turnkey_form__file__content1
+                    .turnkey_form__file__content.turnkey_form__file__content1
                         .turnkey_form__file__content_btns
                             <svg class="turnkey_form__file__content_btn__add" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="6.47845" cy="6.26416" r="5.5" stroke="#01BF96"/>
@@ -71,7 +71,7 @@ div(class="modal-fancy modal" id="modal2" style="display:none")
 
                         span.turnkey_form__file__content__title File for attachment.pdf
                     
-                    .turnkey_form__file__content#turnkey_form__file__content2
+                    .turnkey_form__file__content.turnkey_form__file__content2
                         .turnkey_form__file__content_btns
                             <svg class="turnkey_form__file__content_btn__add" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="6.47845" cy="6.26416" r="5.5" stroke="#01BF96"/>
@@ -93,8 +93,8 @@ div(class="modal-fancy modal" id="modal2" style="display:none")
                 label.turnkey_form__label.turnkey_form__pic__wrapper
                     img.turnkey_form__pic(src="images/pic.png", alt="img")
                     span.turnkey_form__placeholder Enter symbols
-                    input.turnkey_form__input(type="text")
+                    input.turnkey_form__input(type="text" required)
 
                 .turnkey_form__btn__wrapper
-                    button.black__btn Send
+                    button.black__btn(type="submit") Send
                     .turnkey_form__polic B2BCWS uses the information you provide to us to contact you #[b(class="db")] about our relevant content, products and services. For more #[b(class="db")] information check out our #[a(href="#") Privacy Policy].

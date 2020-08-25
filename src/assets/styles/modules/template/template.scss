@@ -216,3 +216,28 @@ p {
     }
   }
 }
+
+.turnkey_form__label.error,
+.turnkey_form__label.active.error {
+  .turnkey_form__placeholder,
+  .turnkey_form__select {
+    color: #ed0606;
+  }
+
+  .turnkey_form__select {
+    background-image: url(../images/red_tr.svg);
+  }
+
+  .turnkey_form__input {
+    border-color: #ed0606;
+  }
+}
+
+.turnkey_form__label.turnkey_form__label__modal_phone.active.error,
+.turnkey_form__label.turnkey_form__label__modal_phone.error {
+  border-color: #ed0606;
+}
+
+.turnkey_form__placeholder__resume.error {
+  color: #ed0606;
+}
